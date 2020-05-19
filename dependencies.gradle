@@ -1,0 +1,23 @@
+def supportVersion = "25.3.1"
+
+project.ext {
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "26.1.0",
+            minSdkVersion    : 16,
+            targetSdkVersion : 22,
+            applicationId    : "",
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+//    为了规范，约束此文件风格
+//    dependencies数组中命名风格
+//    gradle第三方依赖组成规则，groupId:artifactId:version
+//    key为artifactId，value正常填写，version抽取变量
+    dependencies = [
+            //android-support
+            "appcompat-v7"            : "com.android.support:appcompat-v7:${supportVersion}",
+    ]
+
+}
